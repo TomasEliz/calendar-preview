@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Karma", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* header  */
+header {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  font-size: 3rem;
+  color: rgb(31, 31, 31);
+}
+h1 {
+  flex-grow: 1;
+  font-weight: 400;
+  text-align: center;
+}
+.basket {
+  font-size: 5rem;
+  cursor: pointer;
+}
+.basket:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+/* show/hide order modal  */
+.basket-modal {
+  visibility: visible;
+}
+.hide-basket-modal {
+  visibility: hidden;
+}
+/* form  */
+form {
+  width: 27%;
+  display: flex;
+  justify-content: center;
+}
+.form-wrapper {
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid rgb(51, 51, 51);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.input-group {
+  display: flex;
+}
+.radio-wrapper {
+  display: flex;
+  width: 10rem;
+}
+.radio-wrapper label {
+  display: block;
+  width: 100%;
+  padding-top: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + label {
+  background-color: rgb(51, 51, 51);
+  color: #efefef;
+  transform: 0.4s;
+}
+/* image container  */
+.img-container {
+  width: 40%;
+  display: flex;
+}
+.img-container img {
+  width: 90%;
+}
+.img-container button {
+  width: fit-content;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.arrow {
+  height: 10rem;
+  font-size: 4rem;
+  background: rgba(77, 77, 77, 0.1);
+  color: rgba(124, 124, 124, 0.6);
+  border-radius: 5px;
+}
+.img-container button:hover .arrow {
+  background: rgba(77, 77, 77, 0.2);
+  transition: 0.4s;
+}
+/* order modal styling  */
+.basket-modal {
+  position: relative;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+.close-cross {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0.2rem;
+  color: rgb(51, 51, 51);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.close-cross:hover {
+  background-color: rgb(51, 51, 51);
+  color: #efefef;
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+.basket-list {
+  height: fit-content;
+  padding: 3rem;
+  border: 3px solid rgb(51, 51, 51);
+  border-radius: 5px;
+  list-style: none;
+}
+.basket-list li {
+  display: flex;
+}
+.basket-list li > p {
+  min-width: 1.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+}
+.basket-list li p:first-child {
+  margin-right: 2rem;
+  flex-grow: 1;
+  text-align: left;
+}
+.basket-list li button {
+  width: 2rem;
+  height: fit-content;
+  padding: 1px;
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: #efefef;
+  background: rgb(51, 51, 51);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.basket-list li:last-child button {
+  height: 4rem;
+  width: 100%;
+  padding: 0.4rem;
+  font-family: "Karma", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  border: 3px solid transparent;
+}
+.basket-list li button:hover {
+  background-color: rgb(22, 22, 22);
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+.basket-list li:last-child button:hover {
+  background-color: transparent;
+  color: rgb(31, 31, 31);
+  border: 3px solid rgb(31, 31, 31);
+  transform: none;
+}
+/* footer  */
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 4rem;
+  position: relative;
+  bottom: 0;
+  font-size: 2rem;
+  color: rgb(51, 51, 51);
+}
+footer p {
+  flex-grow: 1;
+}
+footer a {
+  display: block;
+  width: fit-content;
+  height: 3rem;
+  margin-right: 1rem;
+}
+.footer-icon {
+  font-size: 3rem;
+  color: rgb(51, 51, 51);
+  border-radius: 5px;
+}
+.footer-icon:hover {
+  background-color: rgb(51, 51, 51);
+  color: #efefef;
+  transition: .4s;
+}
